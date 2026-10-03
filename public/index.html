@@ -2,11 +2,142 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Syed Arham Raza - Lab 02 - 2430-0159</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1 id="heading"></h1>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+      <h1 id="greeting">Web Engineering Lab</h1>
+      <nav>
+        <ul>
+          <li><a href="#schedule" aria-current="location">Office Hours</a></li>
+          <li><a href="#feedback">Send Feedback</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="schedule">
+        <h2>Office Hours</h2>
+
+        <table>
+          <caption>
+            Weekly office hours
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>
+                <time datetime="10:00">10:00</time>–<time datetime="11:00"
+                  >11:00</time
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>
+                <time datetime="14:00">14:00</time>–<time datetime="15:00"
+                  >15:00</time
+                >
+              </td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>
+                <time datetime="09:00">09:00</time>–<time datetime="10:00"
+                  >10:00</time
+                >
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <figure class="location-pin">
+          <svg
+            role="img"
+            aria-labelledby="pin-title"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <title id="pin-title">Location pin</title>
+            <path
+              d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"
+              fill="#0f0f0f"
+            />
+            <circle cx="12" cy="9" r="2.5" fill="#ffffff" />
+          </svg>
+          <figcaption>All office hours are held in Room 214.</figcaption>
+        </figure>
+      </section>
+
+      <section id="feedback">
+        <h2>Send Feedback</h2>
+
+        <form>
+          <p>
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@case.edu"
+              required
+              aria-describedby="email-hint"
+            />
+            <span id="email-hint">
+              We will only use this email to reply to you.</span
+            >
+          </p>
+
+          <fieldset>
+            <legend>Topic</legend>
+            <input
+              type="radio"
+              id="topic-lectures"
+              name="topic"
+              value="lectures"
+              required
+            />
+            <label for="topic-lectures">Lectures</label>
+            <input type="radio" id="topic-labs" name="topic" value="labs" />
+            <label for="topic-labs">Labs</label>
+            <input type="radio" id="topic-other" name="topic" value="other" />
+            <label for="topic-other">Other</label>
+          </fieldset>
+
+          <p>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </p>
+
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <address>Arham, arhamraza399@gmail.com</address>
+    </footer>
   </body>
-  <script src="script.js"></script>
 </html>
