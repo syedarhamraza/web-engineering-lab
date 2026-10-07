@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Syed Arham Raza - Lab 02</title>
+    <title>Syed Arham Raza - Lab 03</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -13,8 +13,12 @@
       <h1 id="greeting">Web Engineering Lab</h1>
       <nav>
         <ul>
-          <li><a href="#schedule" aria-current="location">Office Hours</a></li>
-          <li><a href="#feedback">Send Feedback</a></li>
+          <li>
+            <a href="#schedule" class="nav-link" aria-current="location"
+              >Office Hours</a
+            >
+          </li>
+          <li><a href="#feedback" class="nav-link">Send Feedback</a></li>
         </ul>
       </nav>
     </header>
@@ -76,7 +80,9 @@
             />
             <circle cx="12" cy="9" r="2.5" fill="#ffffff" />
           </svg>
-          <figcaption>All office hours are held in Room 214.</figcaption>
+          <figcaption class="text-muted">
+            All office hours are held in Room 214.
+          </figcaption>
         </figure>
       </section>
 
@@ -105,7 +111,7 @@
               required
               aria-describedby="email-hint"
             />
-            <span id="email-hint">
+            <span id="email-hint" class="text-muted">
               We will only use this email to reply to you.</span
             >
           </p>
