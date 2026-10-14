@@ -115,10 +115,70 @@
   form p {
     margin-block: 0.5rem 1rem;
   }
+
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space);
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  figure {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  #schedule {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space);
+    align-items: start;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 var(--space);
+  }
+
+  form button {
+    justify-self: start;
+  }
+
+  input:not([type="radio"]),
+  textarea {
+    inline-size: 100%;
+  }
+
+  @media (max-width: 40rem) {
+    #schedule,
+    form {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  tr.selected th,
+  tr.selected td {
+    background: color-mix(in oklch, var(--color-accent) 20%, var(--color-bg));
+  }
 }
 
 @layer utilities {
   .text-muted {
     color: var(--color-muted);
+  }
+
+  .span-all {
+    grid-column: 1 / -1;
   }
 }

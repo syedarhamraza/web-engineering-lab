@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Syed Arham Raza - Lab 03</title>
+    <title>Lab 03</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -14,7 +14,10 @@
       <nav>
         <ul>
           <li>
-            <a href="#schedule" class="nav-link" aria-current="location"
+            <a
+              href="#schedule"
+              class="nav-link span-all"
+              aria-current="location"
               >Office Hours</a
             >
           </li>
@@ -35,6 +38,7 @@
             <tr>
               <th scope="col">Day</th>
               <th scope="col">Time</th>
+              <th scope="col">Book</th>
             </tr>
           </thead>
           <tbody>
@@ -45,6 +49,15 @@
                   >11:00</time
                 >
               </td>
+              <td>
+                <button
+                  type="button"
+                  data-day="Monday"
+                  aria-label="Select Monday"
+                >
+                  Select
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Wednesday</td>
@@ -53,6 +66,15 @@
                   >15:00</time
                 >
               </td>
+              <td>
+                <button
+                  type="button"
+                  data-day="Monday"
+                  aria-label="Select Monday"
+                >
+                  Select
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Friday</td>
@@ -60,6 +82,15 @@
                 <time datetime="09:00">09:00</time>–<time datetime="10:00"
                   >10:00</time
                 >
+              </td>
+              <td>
+                <button
+                  type="button"
+                  data-day="Monday"
+                  aria-label="Select Monday"
+                >
+                  Select
+                </button>
               </td>
             </tr>
           </tbody>
@@ -84,6 +115,7 @@
             All office hours are held in Room 214.
           </figcaption>
         </figure>
+        <p id="status" role="status" class="span-all text-muted"></p>
       </section>
 
       <section id="feedback">
@@ -116,7 +148,7 @@
             >
           </p>
 
-          <fieldset>
+          <fieldset class="span-all">
             <legend>Topic</legend>
             <input
               type="radio"
@@ -132,7 +164,7 @@
             <label for="topic-other">Other</label>
           </fieldset>
 
-          <p>
+          <p class="span-all">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </p>
@@ -145,5 +177,7 @@
     <footer>
       <address>Arham, arhamraza399@gmail.com</address>
     </footer>
+    <script src="script.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
